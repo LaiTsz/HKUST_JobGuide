@@ -4,5 +4,16 @@
     <string name="chat">chat</string>
     <string name="home">home</string>
     <string name="setting">setting</string>
-
+    <!-- Headings -->
+    <string name="head_1">Biden</string>
+    <string name="head_2">Just</string>
+    <string name="head_3">Local</string>
+    <string name="head_4">MHA</string>
+    <string name="head_5">Australian</string>
+    <string name="head_6">Former</string>
+    <string name="head_7">Delhi</string>
+    <string name="head_8">Barcelona</string>
+    <string name="head_9">Trillions</string>
+    <string name="head_10">Homemaker</string>
+    <string name="title">title</string>
 </resources>
