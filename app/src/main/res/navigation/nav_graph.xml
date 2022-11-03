@@ -11,10 +11,10 @@
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.example.hkust_jobguide.settingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        android:id="@+id/profileFragment"
+        android:name="com.example.hkust_jobguide.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.hkust_jobguide.homeFragment"
