@@ -2,13 +2,17 @@ package com.example.hkust_jobguide
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_todo.view.*
 
-class TodoAdapter (
-    var todos: List<Todo>
-):RecyclerView.Adapter<TodoAdapter.TodoViewHolder>(){
-    inner class TodoViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView)
+class EventAdapter (
+    var events: List<Event>
+):RecyclerView.Adapter<EventAdapter.TodoViewHolder>(){
+    inner class TodoViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
+        val title:TextView = itemView.findViewById(R.id.info_text)
+        val eventImage: ImageView = itemView.findViewById(R.id.event_image)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         val view =LayoutInflater.from(parent.context).inflate(R.layout.item_todo,parent,false)
@@ -16,13 +20,12 @@ class TodoAdapter (
     }
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
-        holder.itemView.apply {
-            tvTitle.text= todos[position].title
-            cdDone.isChecked = todos[position].isChecked
-        }
+        val item = events[position]
+        holder.eventImage.setImageResource(item.image)
+        holder.title.text = item.title
     }
 
     override fun getItemCount(): Int {
-        return todos.size
+        return events.size
     }
 }

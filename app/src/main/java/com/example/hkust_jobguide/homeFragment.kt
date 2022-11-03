@@ -27,32 +27,56 @@ class homeFragment : Fragment() {
         initRecyclerView()
     }
     fun initRecyclerView(){
-        val todoList = mutableListOf(
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false),
-            Todo("asdfssdf", false)
+        val eventBackgroundList=mutableListOf(
+            R.drawable.image1,
+            R.drawable.image2,
+            R.drawable.image3,
+            R.drawable.image4,
+            R.drawable.image5,
+            R.drawable.image6,
+            R.drawable.image7,
+            R.drawable.image8
         )
-        val rvTodos : RecyclerView? = view?.findViewById(R.id.rvTodos)
-        val adapter = TodoAdapter(todoList)
+        val talkList = mutableListOf(
+            Event("asdfssdf",eventBackgroundList[0]),
+            Event("asdfssdf",eventBackgroundList[1]),
+            Event("asdfssdf",eventBackgroundList[2]),
+            Event("asdfssdf",eventBackgroundList[3]),
+            Event("asdfssdf",eventBackgroundList[4]),
+            Event("asdfssdf",eventBackgroundList[5]),
+            Event("asdfssdf",eventBackgroundList[6]),
+            Event("asdfssdf",eventBackgroundList[7])
+        )
+        val jobList = mutableListOf(
+            Event("sasfasbs",eventBackgroundList[0]),
+            Event("sasfasbs",eventBackgroundList[1]),
+            Event("sasfasbs",eventBackgroundList[2]),
+            Event("sasfasbs",eventBackgroundList[3]),
+            Event("sasfasbs",eventBackgroundList[4]),
+            Event("sasfasbs",eventBackgroundList[5]),
+            Event("sasfasbs",eventBackgroundList[6]),
+            Event("sasfasbs",eventBackgroundList[7])
+        )
+        val rvTalk : RecyclerView? = view?.findViewById(R.id.rvTalk)
+        val rvJob : RecyclerView? = view?.findViewById(R.id.rvJob)
+        val talkAdapter = EventAdapter(talkList)
+        val jobAdapter = EventAdapter(jobList)
         Log.d("homeFragment", "test")
-        if (rvTodos != null) {
-            rvTodos.adapter = adapter
+        if (rvTalk != null && rvJob !=null) {
+            rvTalk.adapter = talkAdapter
+            rvJob.adapter = jobAdapter
         }
-        if (rvTodos != null) {
-            rvTodos.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+        if (rvTalk != null && rvJob !=null) {
+            rvTalk.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            rvJob.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         }
         val btnAddTodo : Button? = view?.findViewById(R.id.btnAddTodo)
         if (btnAddTodo != null) {
             btnAddTodo.setOnClickListener {
                 val title = etTodo.text.toString()
-                val todo = Todo(title, false)
-                todoList.add(todo)
-                adapter.notifyItemInserted(todoList.size - 1)
+                val event = Event(title,eventBackgroundList[0])
+                talkList.add(event)
+                talkAdapter.notifyItemInserted(talkList.size - 1)
             }
         }
     }

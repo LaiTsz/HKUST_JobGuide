@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "127221309097",
+    "project_id": "hkust-job-guide",
+    "storage_bucket": "hkust-job-guide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127221309097:android:df2cbae43663d4f35bd3b8",
+        "android_client_info": {
+          "package_name": "com.example.hkust_jobguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127221309097-1udpm1dgcto464354h7622vvqftc0qlg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hkust_jobguide",
+            "certificate_hash": "7589425e2b2e7a7e9942d25796ba48ae58aa9831"
+          }
+        },
+        {
+          "client_id": "127221309097-c559p68e4p6td9jca62bu0tqt9r2glfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Mh5N2NZBvFB1QDMhpASSODrLGolbj6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127221309097-c559p68e4p6td9jca62bu0tqt9r2glfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
